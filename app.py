@@ -30,7 +30,6 @@ def predict_risk():
     result = "Client Risqué" if prediction[0] == 1 else "Client Non Risqué"
     return result
 
-st.button("Prédire", on_click=predict_risk)
-
-result = predict_risk()
-st.write("### Résultat :", result)
+if st.button("Prédire"):
+    result = predict_risk()
+    st.write("### Résultat :", result)
